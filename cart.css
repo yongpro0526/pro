@@ -1,0 +1,335 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f5f5f5; /* Light background for the whole page */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* App Container (Simulates Phone Screen) */
+.app-container {
+    width: 100%;
+    max-width: 450px; /* Typical phone screen width */
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Header Styling */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    height: 70px;
+    border-bottom: 1px solid #eee; /* Subtle separator, though not visible in image */
+}
+
+.app-header .logo {
+    height: 40px; /* Adjusted size for logos */
+    display: flex;
+    align-items: center;
+}
+
+.app-header .logo.left img {
+    /* Style for JAVA BEAN logo (circular) */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #795548; /* Brown background color for the logo */
+    /* Add border/shadow if needed for a more accurate look */
+}
+
+.app-header .logo.center img {
+    /* Style for Java logo (text-based) */
+    height: 30px;
+    width: auto;
+}
+
+.app-header .icon.right .material-icons {
+    font-size: 28px;
+    color: #444;
+}
+
+/* Main Content Styling */
+.shopping-cart {
+    padding: 20px 20px 100px 20px; /* Padding for main content, bottom space for footer */
+    flex-grow: 1;
+}
+
+.shopping-cart h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Action Bar (Select All / Delete Selected) */
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Custom Checkbox Styling (using the provided image style) */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    user-select: none;
+    line-height: 20px;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #fff;
+    border-color: #388e3c; /* Green border for selected */
+}
+
+.item-checkbox {
+    border-radius: 50%; /* Circular checkbox for items */
+    border: 1px solid #ccc;
+}
+
+.checkbox-container input:checked ~ .item-checkbox {
+    background-color: #388e3c; /* Green background for checked item */
+    border-color: #388e3c;
+}
+
+/* Cart Item Styling */
+.item-list {
+    margin-top: 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.cart-item .checkbox-container {
+    padding-left: 35px;
+    margin-right: -15px;
+}
+
+.item-img {
+    width: 60px;
+    height: 80px;
+    object-fit: contain;
+    margin-right: 15px;
+    border-radius: 8px; /* Subtle rounding for item image */
+}
+
+.item-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+}
+
+.item-temp {
+    font-size: 12px;
+    color: #4a90e2; /* ICE color */
+    font-weight: bold;
+}
+
+.item-temp.hot {
+    color: #d0021b; /* HOT color */
+}
+
+.item-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.item-price {
+    font-size: 14px;
+    color: #333;
+    margin-top: 2px;
+    font-weight: bold;
+}
+
+.item-options {
+    font-size: 11px;
+    color: #888;
+    margin-top: 5px;
+    line-height: 1.2;
+}
+
+/* Item Quantity Controls */
+.item-controls {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 50px; /* Pill shape for controls */
+    overflow: hidden;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-quantity {
+    padding: 0 5px;
+    font-size: 14px;
+    min-width: 20px;
+    text-align: center;
+}
+
+.item-remove {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 5px;
+}
+
+/* Total Price Bar */
+.total-price-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 20px 0;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.total-amount {
+    color: #333;
+}
+
+
+/* Footer Navigation Bar */
+.app-footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    max-width: 450px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #888;
+    font-size: 10px;
+    text-align: center;
+    flex: 1;
+}
+
+.nav-item span.material-icons {
+    font-size: 24px;
+    margin-bottom: 2px;
+    line-height: 1;
+}
+
+.nav-item.active {
+    color: #388e3c; /* Active icon color */
+}
+
+.order-button {
+    background-color: #f7f3f1; /* Light brown/tan background for the active button */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+    position: relative;
+    top: -10px; /* Lift the button slightly */
+    border: 5px solid #fff; /* White border to separate from background */
+}
+
+.order-button .material-icons {
+    color: #795548; /* Brown icon color */
+    font-size: 28px !important;
+}
+
+.nav-item.active .order-button ~ span {
+    color: #795548; /* Text color for the active item */
+    font-weight: bold;
+}
+
+/* Small screen adjustments for better mobile simulation */
+@media (max-width: 450px) {
+    .app-container {
+        box-shadow: none;
+        min-height: 100vh;
+    }
+    .app-footer {
+        position: sticky;
+    }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 - Java Bean</title>
+    <link rel="stylesheet" href="cart.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo left">
+                <img src="logo_bean.png" alt="JAVA BEAN Logo">
+            </div>
+            <div class="logo center">
+                <img src="logo_java.png" alt="Java Logo">
+            </div>
+            <div class="icon right">
+                <span class="material-icons">notifications</span>
+            </div>
+        </header>
+
+        <main class="shopping-cart">
+            <h1>장바구니</h1>
+
+            <div class="action-bar">
+                <label class="checkbox-container">
+                    <input type="checkbox" checked>
+                    전체선택
+                    <span class="checkmark"></span>
+                </label>
+                <button class="delete-btn">선택삭제</button>
+            </div>
+
+            <div class="item-list">
+                <div class="cart-item">
+                    <label class="checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkmark item-checkbox"></span>
+                    </label>
+                    <img src="americano_9000.png" alt="ICE 아메리카노" class="item-img">
+                    <div class="item-details">
+                        <span class="item-temp">ICE</span>
+                        <span class="item-name">아메리카노</span>
+                        <span class="item-price">9,000원</span>
+                    </div>
+                    <div class="item-controls">
+                        <button class="control-btn">-</button>
+                        <span class="item-quantity">3</span>
+                        <button class="control-btn">+</button>
+                    </div>
+                    <button class="item-remove">×</button>
+                </div>
+
+                <div class="cart-item">
+                    <label class="checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkmark item-checkbox"></span>
+                    </label>
+                    <img src="americano_3600.png" alt="ICE 아메리카노 (옵션)" class="item-img">
+                    <div class="item-details">
+                        <span class="item-temp">ICE</span>
+                        <span class="item-name">아메리카노</span>
+                        <span class="item-price">3,600원</span>
+                        <p class="item-options">텀블러 사용 | 샷 추가(+600원)</p>
+                    </div>
+                    <div class="item-controls">
+                        <button class="control-btn">-</button>
+                        <span class="item-quantity">1</span>
+                        <button class="control-btn">+</button>
+                    </div>
+                    <button class="item-remove">×</button>
+                </div>
+
+                <div class="cart-item">
+                    <label class="checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkmark item-checkbox"></span>
+                    </label>
+                    <img src="americano_hot.png" alt="HOT 아메리카노" class="item-img">
+                    <div class="item-details">
+                        <span class="item-temp hot">HOT</span>
+                        <span class="item-name">아메리카노</span>
+                        <span class="item-price">3,000원</span>
+                    </div>
+                    <div class="item-controls">
+                        <button class="control-btn">-</button>
+                        <span class="item-quantity">1</span>
+                        <button class="control-btn">+</button>
+                    </div>
+                    <button class="item-remove">×</button>
+                </div>
+
+                <div class="cart-item">
+                    <label class="checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkmark item-checkbox"></span>
+                    </label>
+                    <img src="cafelatte_ice.png" alt="ICE 카페라떼" class="item-img">
+                    <div class="item-details">
+                        <span class="item-temp">ICE</span>
+                        <span class="item-name">카페라떼</span>
+                        <span class="item-price">3,000원</span>
+                    </div>
+                    <div class="item-controls">
+                        <button class="control-btn">-</button>
+                        <span class="item-quantity">1</span>
+                        <button class="control-btn">+</button>
+                    </div>
+                    <button class="item-remove">×</button>
+                </div>
+
+                <div class="total-price-bar">
+                    <span class="total-label">총 가격</span>
+                    <span class="total-amount">18,600원</span>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <nav class="nav-bar">
+                <a href="#" class="nav-item">
+                    <span class="material-icons">home</span>
+                    <span>홈</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-icons">format_list_bulleted</span>
+                    <span>주문내역</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <div class="order-button">
+                        <span class="material-icons">local_cafe</span>
+                    </div>
+                    <span>주문하기</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-icons">shopping_basket</span>
+                    <span>장바구니</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-icons">person</span>
+                    <span>계정관리</span>
+                </a>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>
