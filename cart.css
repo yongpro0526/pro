@@ -73,6 +73,7 @@ body {
     font-weight: bold;
     text-align: center;
     margin-bottom: 30px;
+    color: #3D2911;
 }
 
 /* Action Bar (Select All / Delete Selected) */
@@ -142,6 +143,9 @@ body {
 /* Cart Item Styling */
 .item-list {
     margin-top: 0;
+    border: 1px #A99A8E solid;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .cart-item {
